@@ -2,7 +2,7 @@
 var generateBtn = document.querySelector("#generate");
 
 var chooseFrom = '';
-var special = '`~!@#$%^&*()_+{}|:"<>?-=[]\;,./';
+var special = '`~!@#$%^&*()_+{}|:"<>?-=[]\;,./'; 
 var lower = 'abcdefghijklmnopqrstuvwxyz';
 var upper = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var numeric = '0123456789';
@@ -22,12 +22,14 @@ function writePassword() {
 
 function generatePassword() {
     var ret = '';
+    //get desired length of password from user
     var passLength = window.prompt("How many characters would you like your password to contain?");
+    //if password length is too short
     if (passLength < 8) {
         window.alert("Not enough characters. Please enter a password length of at least 8.");
         return null;
     }
-    else if (passLength > 128) {
+    else if (passLength > 128) { //if password length is too long
         window.alert("Too many characters. Please enter a password length less than 128 characters.");
         return null;
     }
@@ -51,12 +53,12 @@ function generatePassword() {
     if (numericSel) {
         chooseFrom += numeric;
     }
-
+    //validate user input: if user did not allow any kind of characters to be included in their password:
     if ((!specialSel && !lowerSel && !upperSel && !numericSel) || (chooseFrom.length === 0) ) {
         window.alert("Password must contain at least one type of character.");
         return null;
     }
-    else {
+    else { //choose a random character from the string of allowed characters and concatenate each char to the password one by one
         for (var i = 0; i < passLength; i++) {
             ret += chooseFrom.charAt(Math.random() * chooseFrom.length);
         }
