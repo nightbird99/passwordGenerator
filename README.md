@@ -1,12 +1,17 @@
 # passwordGenerator
+
+(./images/passGenMain.png)
+
 ## Password Criteria Prompts
-After clicking the "Generate Password" button, the user is given  prompts before their password is generated.
+After clicking the "Generate Password" button, the user is given 5 prompts before their password is generated.
 The first prompt asks the user how many characters they would like their password to include.
-The second prompt asks if the user would like their password to include special characters.
-The third prompt asks if the user would like their password to include lowercase characters.
-The fourth prompt asks if the user would like their password to include uppercase characters.
-The fifth prompt asks if the user would like their password to include numeric characters.
+(./images/passGenLeng.png)
+The next four prompts ask the user if they would like to include special characters, lowercase characters, uppercase characters, or numeric characters.
+(./images/passGenCharPrompt.png)
 After answering each prompt, the password is printed to the screen.
+(./images/passGenEnd.png)
+
+
 
 ## How It Works
 Each type of character is stored in its own variable containing every character of that type. As the user answers the prompts, the characters of each type they wish to include are added to another variable. Once the user has finished answering the prompts and all the desied character types have been added, the program picks a character at random from the list of allowed characters and adds them to the password string one at a time. This password is then printed to the screen.
