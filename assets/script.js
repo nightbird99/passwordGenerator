@@ -12,10 +12,11 @@ var numeric = '0123456789';
 
 // Write password to the #password input
 function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+    chooseFrom = '';
+    var password = generatePassword();
+    var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+    passwordText.value = password;
 
 }
 
