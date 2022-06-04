@@ -23,4 +23,4 @@ If the user inputs a desired length greater than 128, an alert will appear on th
 The password generator must be allowed to include at least one type of character. 
 If the user does not allow at least one type of character to be included in their password, the password cannot be generated and an alert will appear on the screen informing the user that their password must include at least one type of character.
 
-Deploy Link: https://nightbird99.github.io/passwordGenerator/
+Deploy Link: https://oguerra9.github.io/passwordGenerator/
